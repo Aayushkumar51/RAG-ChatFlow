@@ -1,0 +1,42 @@
+#web framework
+fastapi
+uvicorn[standard]
+python-multipart #for fileupload
+
+
+
+#langchain & Ecosystem
+langchain
+langchain-community
+langchain-core
+langchain-groq
+
+
+#vectorstore
+pinecone
+chromadb
+
+#Em bedding
+#sentence-transformer
+langchain-google-genai
+
+
+#pdfparsing
+PyPDF
+
+#enviroment-variable
+python-dotenv
+
+
+#typing & utilities
+pydantic
+requests
+tqdm
+
+
+#logging
+loguru
+
+
+#file upload
+aiofiles
