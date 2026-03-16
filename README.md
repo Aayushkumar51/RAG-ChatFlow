@@ -54,9 +54,11 @@ PINECONE_API_KEY=...
 
 - Hosted on [Render](https://render.com)
 - **Root Directory**: leave blank (repo root).
-- **Start Command** (pick one):
-  - **Option A** (recommended): `bash run.sh`
-  - **Option B**: `export PYTHONPATH="$(pwd)" && poetry run uvicorn main:app --host 0.0.0.0 --port $PORT`
+- **Start Command** (use this exactly):
+  ```bash
+  export PYTHONPATH="$(pwd)" && poetry run uvicorn main:app --host 0.0.0.0 --port $PORT
+  ```
+  Ensure **Root Directory** is blank so this runs from the repo root (where `main.py` and `server/` are).
 
 ---
 
