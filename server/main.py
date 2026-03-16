@@ -1,9 +1,13 @@
+# Ensure project root is on path so "server" is findable when Render runs uvicorn server.main:app
+import sys
+from pathlib import Path
+_root = Path(__file__).resolve().parent.parent
+if str(_root) not in sys.path:
+    sys.path.insert(0, str(_root))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-
-
-#CORSMiddleware is used in FastAPI to allow requests from different origins (domains, ports, or protocols).
 from server.middlewares.exception_handlers import catch_exceptions_middleware
 from server.modules.routes.upload_pdf import router as upload_router
 from server.modules.routes.ask_question import router as ask_router
